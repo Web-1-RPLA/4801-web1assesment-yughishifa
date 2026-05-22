@@ -1,0 +1,32 @@
+CREATE TABLE `anggota` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nama` varchar(255) NOT NULL,
+  `nim_nip` varchar(20) NOT NULL,
+  `jurusan_prodi` varchar(100) NOT NULL,
+  `no_telepon` varchar(15) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `buku` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kode_buku` varchar(20) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `pengarang` varchar(255) NOT NULL,
+  `tahun_terbit` year NOT NULL,
+  `jumlah_stok` int(11) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `peminjaman` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_anggota` int(11) NOT NULL,
+  `id_buku` int(11) NOT NULL,
+  `tanggal_pinjam` date NOT NULL,
+  `tanggal_kembali` date DEFAULT NULL,
+  `status` enum('Dipinjam','Dikembalikan','Terlambat') NOT NULL DEFAULT 'Dipinjam',
+  PRIMARY KEY (`id`),
+  KEY `id_anggota` (`id_anggota`),
+  KEY `id_buku` (`id_buku`),
+  CONSTRAINT `fk_peminjaman_anggota` FOREIGN KEY (`id_anggota`) REFERENCES `anggota` (`id`),
+  CONSTRAINT `fk_peminjaman_buku` FOREIGN KEY (`id_buku`) REFERENCES `buku` (`id`)
+);
