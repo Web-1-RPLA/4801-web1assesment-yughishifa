@@ -19,19 +19,19 @@
             display: inline-block;
             padding: 10px 20px;
             margin: 20px auto;
-            background-color: #007bff;
+            background-color: #93182b;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
             font-size: 18px;
-            border: 2px solid #0056b3;
+            border: 2px solid #93182b;
             text-align: center;
             max-width: 200px
         }
         .write-diary-button:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
+            background-color: #93182b;
+            border-color: #93182b;
         }
         .write-diary-button:active {
             transform: translateY(1px);
@@ -49,7 +49,7 @@
             border-bottom: 1px solid #ddd;
         }
         th {
-            background-color: #007bff;
+            background-color: #93182b;
             color: #fff;
             font-weight: bold;
         }
@@ -67,9 +67,11 @@
     </style>
 </head>
 <body>
-  <a href="index.php">Home</a>
+  <center>
   <h2>Data Buku</h2>
-  <a href="tambahbuku.php">Tambah Buku</a>
+  <a href="tambahbuku.php">Tambah Buku</a> <br>
+  <a href="index.php">Home</a>
+  </center>
   <hr>
 
   <?php 

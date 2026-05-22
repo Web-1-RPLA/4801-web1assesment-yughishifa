@@ -19,7 +19,7 @@
             display: inline-block;
             padding: 10px 20px;
             margin: 20px auto;
-            background-color: #007bff;
+            background-color: #93182b;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
@@ -67,9 +67,10 @@
     </style>
 </head>
 <body>
-  <h2>Data Peminjaman</h2>
+  <center><h2>Data Peminjaman</h2>
   <a href="index.php">Home</a>
-  <a href="tambahpeminjaman.php">Tambah Peminjaman</a>
+  <a href="tambahpeminjaman.php">Tambah Peminjaman</a></center>
+  
   <hr>
 
   <?php 
